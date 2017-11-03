@@ -15,12 +15,12 @@ module.exports = function() {
 	var sessions;
 
 	self.init_ = function(cerus) {
-		sessions = require("./lib/sessions")();
+		sessions = require("./lib/sessions")(cerus);
 
 		cerus.router().use()
 		.then(function(req, res) {
 			var sessions_ = sessions.get(res, req);
-			
+
 			res.sessions = function() {
 				return sessions_;
 			}
