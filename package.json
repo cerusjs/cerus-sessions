@@ -1,0 +1,17 @@
+{
+	"name": "cerus-sessions",
+	"version": "0.0.1",
+	"description": "The sessions plugin for CerusJS",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cerusjs/cerus-sessions.git"
+	},
+	"author": "cerusjs",
+	"bugs": {
+		"url": "https://github.com/cerusjs/cerus-sessions/issues"
+	},
+	"scripts": {},
+	"homepage": "https://github.com/cerusjs/cerus-sessions",
+	"dependencies": {}
+}
