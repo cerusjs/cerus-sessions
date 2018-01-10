@@ -1,11 +1,10 @@
 module.exports = function() {
-	var self = {};
-
+	var plugin = {};
 	var package = require("./package.json");
 	
-	self.name = package["name"];
-	self.version = package["version"];
-	self.dependencies = [
+	plugin.name = package["name"];
+	plugin.version = package["version"];
+	plugin.dependencies = [
 		"cerus",
 		"cerus-settings",
 		"cerus-router",
@@ -14,7 +13,7 @@ module.exports = function() {
 
 	var sessions;
 
-	self.init_ = function(cerus) {
+	plugin.init_ = function(cerus) {
 		cerus.settings().setting("sessions.secret", "THIS_IS_A_SECRET");
 		cerus.settings().setting("sessions.cookie.http", true);
 		cerus.settings().setting("sessions.cookie.age", undefined);
@@ -30,6 +29,7 @@ module.exports = function() {
 
 		sessions = require("./lib/sessions")(cerus);
 
+		// TODO: Needs to be updated
 		cerus.router().use()
 		.then(function(req, res) {
 			var sessions_ = sessions.get(res, req);
@@ -40,5 +40,5 @@ module.exports = function() {
 		});
 	}
 
-	return self;
+	return plugin;
 }
