@@ -1,6 +1,6 @@
 {
 	"name": "cerus-sessions",
-	"version": "0.0.3",
+	"version": "0.1.0",
 	"description": "The sessions plugin for CerusJS",
 	"main": "index.js",
 	"repository": {
