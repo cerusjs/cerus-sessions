@@ -31,12 +31,14 @@ module.exports = function() {
 
 		// TODO: Needs to be updated
 		cerus.router().use()
-		.then(function(req, res) {
+		.then(function(req, res, next) {
 			var sessions_ = sessions.get(res, req);
 
 			res.sessions = function() {
 				return sessions_;
 			}
+
+			next();
 		});
 	}
 
