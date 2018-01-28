@@ -27,7 +27,7 @@ module.exports = function() {
 		cerus.settings().setting("sessions.safe", true);
 		cerus.settings().setting("sessions.unset", false);
 
-		sessions = require("./lib/sessions")(cerus);
+		sessions = new (require("./lib/sessions"))(cerus);
 
 		// TODO: Needs to be updated
 		cerus.router().use()
