@@ -12,7 +12,7 @@ module.exports = function() {
 
 	var sessions;
 
-	plugin.init_ = function(cerus) {
+	plugin._init = function(cerus) {
 		sessions = new (require("./lib/sessions"))(cerus);
 
 		// TODO: Needs to be updated
